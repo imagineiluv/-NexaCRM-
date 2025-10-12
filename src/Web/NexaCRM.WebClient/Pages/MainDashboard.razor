@@ -140,403 +140,126 @@
         </div>
     </div>
 
-    <div class="layout-container flex h-full grow flex-col">
-    <div class="gap-1 px-6 flex flex-1 justify-center py-5 dashboard-container">
-        <div class="layout-content-container flex flex-col w-80 dashboard-sidebar">
-        <div class="flex h-full min-h-[700px] flex-col justify-between bg-slate-50 p-4">
-            <div class="flex flex-col gap-4">
-            <div class="flex flex-col">
-                <h1 class="text-[#0e131b] text-base font-medium leading-normal">@Localizer["CRM"]</h1>
-                <p class="text-[#4d6a99] text-sm font-normal leading-normal">@Localizer["AcmeCo"]</p>
+    <div class="layout-container flex h-full grow">
+        <!-- Icon Bar -->
+        <div class="flex-shrink-0 bg-gray-800 text-white flex flex-col items-center justify-between p-2" style="width: 60px;">
+            <div class="flex flex-col items-center">
+                <!-- Brand Icon -->
+                <div class="p-2 mb-4">
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                </div>
+                <!-- Navigation Icons -->
+                <nav class="flex flex-col space-y-4">
+                    <a href="#" class="p-2 rounded-lg bg-gray-700">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                    </a>
+                    <a href="#" class="p-2 rounded-lg hover:bg-gray-700">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                    </a>
+                    <a href="#" class="p-2 rounded-lg hover:bg-gray-700">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-1.1 0-2 .9-2 2v2.68C8.04 8.1 6.1 10.04 5.68 12H3c-1.1 0-2 .9-2 2s.9 2 2 2h2.68c.42 1.96 2.36 3.9 4.32 4.32V20c0 1.1.9 2 2 2s2-.9 2-2v-2.68c1.96-.42 3.9-2.36 4.32-4.32H21c1.1 0 2-.9 2-2s-.9-2-2-2h-2.68C17.9 10.04 15.96 8.1 14 7.68V5c0-1.1-.9-2-2-2zm0 4c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4z"/></svg>
+                    </a>
+                    <a href="#" class="p-2 rounded-lg hover:bg-gray-700">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18 8c0-3.31-2.69-6-6-6S6 4.69 6 8c0 4.5 6 11 6 11s6-6.5 6-11zm-8 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/></svg>
+                    </a>
+                    <a href="#" class="p-2 rounded-lg hover:bg-gray-700">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8h16v10z"/></svg>
+                    </a>
+                </nav>
             </div>
-            <div class="flex flex-col gap-2">
-                <div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-[#e7ecf3]">
-                <div class="text-[#0e131b]" data-icon="House" data-size="24px" data-weight="fill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                        d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"
-                    ></path>
-                    </svg>
+            <!-- Settings Icon -->
+            <div class="p-2">
+                <a href="/settings-page" class="p-2 rounded-lg hover:bg-gray-700">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation Panel -->
+        <div class="flex-shrink-0 bg-white border-r border-gray-200 flex flex-col" style="width: 280px;">
+            <div class="p-4 border-b border-gray-200">
+                <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User" />
+                    <div class="ml-3">
+                        <p class="text-sm font-semibold text-gray-800">John Doe</p>
+                        <p class="text-xs text-gray-500">customerpop@gmail.com</p>
+                    </div>
                 </div>
-                <p class="text-[#0e131b] text-sm font-medium leading-normal">@Localizer["Dashboard"]</p>
+            </div>
+            <div class="flex-1 p-4 space-y-4">
+                <div class="space-y-2">
+                    <h3 class="text-xs font-semibold text-gray-400 uppercase">Projects</h3>
+                    <a href="#" class="flex items-center justify-between p-2 rounded-lg bg-gray-100 text-sm font-medium text-gray-800">
+                        <span>Dashboard</span>
+                        <span class="px-2 py-0.5 rounded-full bg-gray-200 text-xs">0</span>
+                    </a>
+                    <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-sm font-medium text-gray-600">
+                        Library
+                    </a>
+                    <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-sm font-medium text-gray-600">
+                        Shared Projects
+                    </a>
                 </div>
-                <AuthorizeView>
-                    <Authorized>
-                        @{
-                            var salesLink = "/sales-pipeline-page";
-                            if (context.User.IsInRole("Manager"))
-                            {
-                                salesLink = "/sales-manager-dashboard";
-                            }
-                        }
-                        <a href="@salesLink" class="flex items-center gap-3 px-3 py-2 nav-link" style="color: #0e131b !important;">
-                            <div class="text-[#0e131b]" data-icon="CurrencyDollar" data-size="24px" data-weight="regular" style="color: #0e131b !important;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256" style="color: #0e131b !important; fill: #0e131b !important;">
-                                <path
-                                    d="M152,120H136V56h8a32,32,0,0,1,32,32,8,8,0,0,0,16,0,48.05,48.05,0,0,0-48-48h-8V24a8,8,0,0,0-16,0V40h-8a48,48,0,0,0,0,96h8v64H104a32,32,0,0,1-32-32,8,8,0,0,0-16,0,48.05,48.05,0,0,0,48,48h16v16a8,8,0,0,0,16,0V216h16a48,48,0,0,0,0-96Zm-40,0a32,32,0,0,1,0-64h8v64Zm40,80H136V136h16a32,32,0,0,1,0,64Z"
-                                ></path>
-                                </svg>
+                <div class="space-y-2">
+                    <h3 class="text-xs font-semibold text-gray-400 uppercase">Status</h3>
+                    <a href="#" class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-100 text-sm font-medium text-gray-600">
+                        <span>New</span>
+                        <span class="px-2 py-0.5 rounded-full bg-gray-200 text-xs">3</span>
+                    </a>
+                    <a href="#" class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-100 text-sm font-medium text-gray-600">
+                        <span>Updates</span>
+                        <span class="px-2 py-0.5 rounded-full bg-gray-200 text-xs">2</span>
+                    </a>
+                     <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-sm font-medium text-gray-600">
+                        Team Review
+                    </a>
+                </div>
+                 <div class="space-y-2">
+                    <h3 class="text-xs font-semibold text-gray-400 uppercase">History</h3>
+                    <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-sm font-medium text-gray-600">
+                        Recently Edited
+                    </a>
+                    <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-sm font-medium text-gray-600">
+                        Archive
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col bg-gray-50">
+            <div class="p-8">
+                <h1 class="text-2xl font-bold text-gray-800">Dashboard</h1>
+                <p class="text-gray-500">All Your Workflows And Permissions Managed</p>
+
+                <div class="mt-8 p-8 bg-white rounded-lg shadow-md text-center">
+                    <p class="text-gray-500">Executions</p>
+                    <p class="text-6xl font-bold text-gray-800 mt-2">340</p>
+                    <p class="text-green-500 mt-2">↑ 204%</p>
+                    <a href="#" class="inline-block mt-4 text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                        See Report →
+                    </a>
+                </div>
+
+                <div class="mt-8">
+                    <div class="flex border-b">
+                        <button class="py-2 px-4 text-sm font-medium text-indigo-600 border-b-2 border-indigo-500">Workflows</button>
+                        <button class="py-2 px-4 text-sm font-medium text-gray-500 hover:text-gray-700">Permissions</button>
+                        <button class="py-2 px-4 text-sm font-medium text-gray-500 hover:text-gray-700">Executions</button>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center">
+                        <div class="relative">
+                            <input type="text" placeholder="Search" class="pl-10 pr-4 py-2 border rounded-lg w-64"/>
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" /></svg>
                             </div>
-                            <p class="text-[#0e131b] text-sm font-medium leading-normal" style="color: #0e131b !important;">@Localizer["Sales"]</p>
-                        </a>
-                        <a href="/contacts" class="flex items-center gap-3 px-3 py-2 nav-link" style="color: #0e131b !important;">
-                            <div class="text-[#0e131b]" data-icon="Users" data-size="24px" data-weight="regular" style="color: #0e131b !important;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256" style="color: #0e131b !important; fill: #0e131b !important;">
-                                <path
-                                    d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"
-                                ></path>
-                                </svg>
-                            </div>
-                            <p class="text-[#0e131b] text-sm font-medium leading-normal" style="color: #0e131b !important;">@Localizer["Contacts"]</p>
-                        </a>
-                    </Authorized>
-                </AuthorizeView>
-                <a href="/marketing-campaign-management-interface" class="flex items-center gap-3 px-3 py-2 nav-link" style="color: #0e131b !important;">
-                    <div class="text-[#0e131b]" data-icon="Megaphone" data-size="24px" data-weight="regular" style="color: #0e131b !important;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256" style="color: #0e131b !important; fill: #0e131b !important;">
-                        <path
-                            d="M240,120a48.05,48.05,0,0,0-48-48H152.2c-2.91-.17-53.62-3.74-101.91-44.24A16,16,0,0,0,24,40V200a16,16,0,0,0,26.29,12.25c37.77-31.68,77-40.76,93.71-43.3v31.72A16,16,0,0,0,151.12,214l11,7.33A16,16,0,0,0,186.5,212l11.77-44.36A48.07,48.07,0,0,0,240,120ZM40,199.93V40h0c42.81,35.91,86.63,45,104,47.24v65.48C126.65,155,82.84,164.07,40,199.93Zm131,8,0,.11-11-7.33V168h21.6ZM192,152H160V88h32a32,32,0,1,1,0,64Z"
-                        ></path>
-                        </svg>
+                        </div>
                     </div>
-                    <p class="text-[#0e131b] text-sm font-medium leading-normal" style="color: #0e131b !important;">@Localizer["Marketing"]</p>
-                </a>
-                <a href="/customer-support-dashboard" class="flex items-center gap-3 px-3 py-2 nav-link" style="color: #0e131b !important;">
-                    <div class="text-[#0e131b]" data-icon="Headset" data-size="24px" data-weight="regular" style="color: #0e131b !important;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256" style="color: #0e131b !important; fill: #0e131b !important;">
-                        <path
-                            d="M201.89,54.66A103.43,103.43,0,0,0,128.79,24H128A104,104,0,0,0,24,128v56a24,24,0,0,0,24,24H64a24,24,0,0,0,24-24V144a24,24,0,0,0-24-24H40.36A88.12,88.12,0,0,1,190.54,65.93,87.39,87.39,0,0,1,215.65,120H192a24,24,0,0,0-24,24v40a24,24,0,0,0,24,24h24a24,24,0,0,1-24,24H136a8,8,0,0,0,0,16h56a40,40,0,0,0,40-40V128A103.41,103.41,0,0,0,201.89,54.66ZM64,136a8,8,0,0,1,8,8v40a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V136Zm128,56a8,8,0,0,1-8-8V144a8,8,0,0,1,8-8h24v56Z"
-                        ></path>
-                        </svg>
+                     <div class="mt-4 bg-white rounded-lg shadow-md p-8 text-center">
+                        <p class="text-gray-500">Where are your Workflows?</p>
+                        <p class="text-gray-400 text-sm mt-2">Create your first Workflow with your team to get started.</p>
                     </div>
-                    <p class="text-[#0e131b] text-sm font-medium leading-normal" style="color: #0e131b !important;">@Localizer["Service"]</p>
-                </a>
-                <a href="/reports-page" class="flex items-center gap-3 px-3 py-2 nav-link" style="color: #0e131b !important;">
-                    <div class="text-[#0e131b]" data-icon="PresentationChart" data-size="24px" data-weight="regular" style="color: #0e131b !important;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256" style="color: #0e131b !important; fill: #0e131b !important;">
-                        <path
-                            d="M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,136H40V56H216V176ZM104,120v24a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm32-16v40a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32-16v56a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z"
-                        ></path>
-                        </svg>
-                    </div>
-                    <p class="text-[#0e131b] text-sm font-medium leading-normal" style="color: #0e131b !important;">@Localizer["Reports"]</p>
-                </a>
-                <a href="/settings-page" class="flex items-center gap-3 px-3 py-2" style="color: #0e131b !important;">
-                    <div class="text-[#0e131b]" data-icon="Gear" data-size="24px" data-weight="regular" style="color: #0e131b !important;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                            d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"
-                        ></path>
-                        </svg>
-                    </div>
-                    <p class="text-[#0e131b] text-sm font-medium leading-normal" style="color: #0e131b !important;">@Localizer["Settings"]</p>
-                </a>
-            </div>
-            </div>
-        </div>
-        </div>
-        <div class="layout-content-container flex flex-col max-w-[960px] flex-1 dashboard-main-content" style="padding-top: 70px;">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7ecf3] px-10 py-3 dashboard-header dashboard-top-nav">
-            <div class="flex items-center gap-4 text-[#0e131b]">
-            <div class="size-4">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"
-                    fill="currentColor"
-                ></path>
-                </svg>
-            </div>
-            <h2 class="text-[#0e131b] text-lg font-bold leading-tight tracking-[-0.015em] dashboard-title">@Localizer["CRM"]</h2>
-            </div>
-            <div class="flex flex-1 justify-end gap-8">
-            <label class="flex flex-col min-w-40 !h-10 max-w-64 search-container">
-                <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
-                <div
-                    class="text-[#4d6a99] flex border-none bg-[#e7ecf3] items-center justify-center pl-4 rounded-l-lg border-r-0"
-                    data-icon="MagnifyingGlass"
-                    data-size="24px"
-                    data-weight="regular"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
-                    ></path>
-                    </svg>
                 </div>
-                <input
-                    placeholder='@Localizer["Search"]'
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0e131b] focus:outline-0 focus:ring-0 border-none bg-[#e7ecf3] focus:border-none h-full placeholder:text-[#4d6a99] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
-                    value=""
-                />
-                </div>
-            </label>
-            <div class="flex gap-2">
-                <button
-                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#e7ecf3] text-[#0e131b] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 dashboard-button"
-                >
-                <div class="text-[#0e131b]" data-icon="Bell" data-size="20px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                        d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
-                    ></path>
-                    </svg>
-                </div>
-                </button>
-                <button
-                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#e7ecf3] text-[#0e131b] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 dashboard-button"
-                >
-                <div class="text-[#0e131b]" data-icon="Question" data-size="20px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                        d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
-                    ></path>
-                    </svg>
-                </div>
-                </button>
             </div>
-            <div
-                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-                style='background-image: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);'
-            ></div>
-            </div>
-        </header>
-        <div class="flex flex-wrap justify-between gap-3 p-4">
-            <AuthorizeView>
-                <Authorized>
-                    <p class="text-[#0e131b] tracking-light text-[32px] font-bold leading-tight min-w-72 dashboard-welcome">@Localizer["WelcomeBack", @context.User.Identity?.Name ?? ""]</p>
-                </Authorized>
-            </AuthorizeView>
-        </div>
-        <div class="px-4 py-3">
-            <label class="flex flex-col min-w-40 h-12 w-full">
-            <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
-                <div
-                class="text-[#4d6a99] flex border-none bg-[#e7ecf3] items-center justify-center pl-4 rounded-l-lg border-r-0"
-                data-icon="MagnifyingGlass"
-                data-size="24px"
-                data-weight="regular"
-                >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                    d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
-                    ></path>
-                </svg>
-                </div>
-                <input
-                placeholder='@Localizer["Search"]'
-                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0e131b] focus:outline-0 focus:ring-0 border-none bg-[#e7ecf3] focus:border-none h-full placeholder:text-[#4d6a99] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
-                value=""
-                />
-            </div>
-            </label>
-        </div>
-        <h2 class="text-[#0e131b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5" style="display: block !important; visibility: visible !important;">@Localizer["DashboardOverview"]</h2>
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4 dashboard-grid" style="display: grid !important; visibility: visible !important;">
-            <button class="flex flex-1 gap-3 rounded-lg border border-[#d0d9e7] bg-slate-50 p-4 items-center dashboard-card" data-route="/sales-pipeline" style="display: flex !important; visibility: visible !important;">
-            <div class="text-[#0e131b]" data-icon="Funnel" data-size="24px" data-weight="regular">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                    d="M230.6,49.53A15.81,15.81,0,0,0,216,40H40A16,16,0,0,0,28.19,66.76l.08.09L96,139.17V216a16,16,0,0,0,24.87,13.32l32-21.34A16,16,0,0,0,160,194.66V139.17l67.74-72.32.08-.09A15.8,15.8,0,0,0,230.6,49.53ZM40,56h0Zm108.34,72.28A15.92,15.92,0,0,0,144,139.17v55.49L112,216V139.17a15.92,15.92,0,0,0-4.32-10.94L40,56H216Z"
-                ></path>
-                </svg>
-            </div>
-            <h2 class="text-[#0e131b] text-base font-bold leading-tight">@Localizer["SalesPipeline"]</h2>
-            </button>
-            <button class="flex flex-1 gap-3 rounded-lg border border-[#d0d9e7] bg-slate-50 p-4 items-center dashboard-card" data-route="/reports" style="display: flex !important; visibility: visible !important;">
-            <div class="text-[#0e131b]" data-icon="Target" data-size="24px" data-weight="regular">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                    d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z"
-                ></path>
-                </svg>
-            </div>
-            <h2 class="text-[#0e131b] text-base font-bold leading-tight">@Localizer["QuarterlyPerformance"]</h2>
-            </button>
-            <button class="flex flex-1 gap-3 rounded-lg border border-[#d0d9e7] bg-slate-50 p-4 items-center dashboard-card" data-route="/tasks-page" style="display: flex !important; visibility: visible !important;">
-            <div class="text-[#0e131b]" data-icon="ListBullets" data-size="24px" data-weight="regular">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                    d="M80,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H88A8,8,0,0,1,80,64Zm136,56H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,64H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16ZM44,52A12,12,0,1,0,56,64,12,12,0,0,0,44,52Zm0,64a12,12,0,1,0,12,12A12,12,0,0,0,44,116Zm0,64a12,12,0,1,0,12,12A12,12,0,0,0,44,180Z"
-                ></path>
-                </svg>
-            </div>
-            <h2 class="text-[#0e131b] text-base font-bold leading-tight">@Localizer["Tasks"]</h2>
-            </button>
-            <button class="flex flex-1 gap-3 rounded-lg border border-[#d0d9e7] bg-slate-50 p-4 items-center dashboard-card" data-route="#recent-activity" style="display: flex !important; visibility: visible !important;">
-            <div class="text-[#0e131b]" data-icon="Users" data-size="24px" data-weight="regular">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                    d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"
-                ></path>
-                </svg>
-            </div>
-            <h2 class="text-[#0e131b] text-base font-bold leading-tight">@Localizer["RecentActivity"]</h2>
-            </button>
-        </div>
-        <h2 class="text-[#0e131b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5" style="display: block !important; visibility: visible !important;">@Localizer["SalesPipelineSummary"]</h2>
-        <div class="flex flex-wrap gap-4 px-4 py-6" style="display: flex !important; visibility: visible !important;">
-            <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-lg border border-[#d0d9e7] p-6" style="display: flex !important; visibility: visible !important; width: 100%; min-width: auto;">
-            <p class="text-[#0e131b] text-base font-medium leading-normal" style="display: block !important; visibility: visible !important;">@Localizer["DealsByStage"]</p>
-            <div class="grid min-h-[180px] gap-x-4 gap-y-6 grid-cols-[auto_1fr] items-center py-3" style="display: grid !important; visibility: visible !important; min-height: 120px;">
-                <p class="text-[#4d6a99] text-[13px] font-bold leading-normal tracking-[0.015em]">@Localizer["Prospecting"]</p>
-                <div class="h-full flex-1"><div class="border-[#4d6a99] bg-[#e7ecf3] border-r-2 h-full" style="width: 60%;"></div></div>
-                <p class="text-[#4d6a99] text-[13px] font-bold leading-normal tracking-[0.015em]">@Localizer["Qualification"]</p>
-                <div class="h-full flex-1"><div class="border-[#4d6a99] bg-[#e7ecf3] border-r-2 h-full" style="width: 90%;"></div></div>
-                <p class="text-[#4d6a99] text-[13px] font-bold leading-normal tracking-[0.015em]">@Localizer["Proposal"]</p>
-                <div class="h-full flex-1"><div class="border-[#4d6a99] bg-[#e7ecf3] border-r-2 h-full" style="width: 30%;"></div></div>
-                <p class="text-[#4d6a99] text-[13px] font-bold leading-normal tracking-[0.015em]">@Localizer["Negotiation"]</p>
-                <div class="h-full flex-1"><div class="border-[#4d6a99] bg-[#e7ecf3] border-r-2 h-full" style="width: 40%;"></div></div>
-                <p class="text-[#4d6a99] text-[13px] font-bold leading-normal tracking-[0.015em]">@Localizer["ClosedWon"]</p>
-                <div class="h-full flex-1"><div class="border-[#4d6a99] bg-[#e7ecf3] border-r-2 h-full" style="width: 90%;"></div></div>
-                <p class="text-[#4d6a99] text-[13px] font-bold leading-normal tracking-[0.015em]">@Localizer["ClosedLost"]</p>
-                <div class="h-full flex-1"><div class="border-[#4d6a99] bg-[#e7ecf3] border-r-2 h-full" style="width: 80%;"></div></div>
-            </div>
-            </div>
-        </div>
-        <h2 class="text-[#0e131b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5" style="display: block !important; visibility: visible !important;">@Localizer["QuarterlyPerformance"]</h2>
-        <div class="flex flex-wrap gap-4 px-4 py-6" style="display: flex !important; visibility: visible !important;">
-            <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-lg border border-[#d0d9e7] p-6" style="display: flex !important; visibility: visible !important; width: 100%; min-width: auto;">
-            <p class="text-[#0e131b] text-base font-medium leading-normal" style="display: block !important; visibility: visible !important;">@Localizer["RevenueByQuarter"]</p>
-            <div class="grid min-h-[180px] grid-flow-col gap-6 grid-rows-[1fr_auto] items-end justify-items-center px-3" style="display: grid !important; visibility: visible !important; min-height: 120px;">
-                <div class="border-[#4d6a99] bg-[#e7ecf3] border-t-2 w-full" style="height: 70%;"></div>
-                <p class="text-[#4d6a99] text-[13px] font-bold leading-normal tracking-[0.015em]">@Localizer["Q1"]</p>
-                <div class="border-[#4d6a99] bg-[#e7ecf3] border-t-2 w-full" style="height: 90%;"></div>
-                <p class="text-[#4d6a99] text-[13px] font-bold leading-normal tracking-[0.015em]">@Localizer["Q2"]</p>
-                <div class="border-[#4d6a99] bg-[#e7ecf3] border-t-2 w-full" style="height: 70%;"></div>
-                <p class="text-[#4d6a99] text-[13px] font-bold leading-normal tracking-[0.015em]">@Localizer["Q3"]</p>
-                <div class="border-[#4d6a99] bg-[#e7ecf3] border-t-2 w-full" style="height: 30%;"></div>
-                <p class="text-[#4d6a99] text-[13px] font-bold leading-normal tracking-[0.015em]">@Localizer["Q4"]</p>
-            </div>
-            </div>
-        </div>
-        <h2 class="text-[#0e131b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">@Localizer["Tasks"]</h2>
-        <div class="px-4 py-3 container">
-            <div class="flex overflow-hidden rounded-lg border border-[#d0d9e7] bg-slate-50 dashboard-table-container" style="visibility: visible !important;">
-            <table class="flex-1">
-                <thead>
-                <tr class="bg-slate-50">
-                    <th class="table-b8380c11-022e-424e-acc3-69900c40b013-column-120 px-4 py-3 text-left text-[#0e131b] w-[400px] text-sm font-medium leading-normal">@Localizer["Task"]</th>
-                    <th class="table-b8380c11-022e-424e-acc3-69900c40b013-column-240 px-4 py-3 text-left text-[#0e131b] w-[400px] text-sm font-medium leading-normal">
-                    @Localizer["DueDate"]
-                    </th>
-                    <th class="table-b8380c11-022e-424e-acc3-69900c40b013-column-360 px-4 py-3 text-left text-[#0e131b] w-60 text-sm font-medium leading-normal">@Localizer["Priority"]</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="border-t border-t-[#d0d9e7]">
-                    <td class="table-b8380c11-022e-424e-acc3-69900c40b013-column-120 h-[72px] px-4 py-2 w-[400px] text-[#0e131b] text-sm font-normal leading-normal">
-                    @Localizer["FollowUp"]
-                    </td>
-                    <td class="table-b8380c11-022e-424e-acc3-69900c40b013-column-240 h-[72px] px-4 py-2 w-[400px] text-[#4d6a99] text-sm font-normal leading-normal">
-                    2024-07-15
-                    </td>
-                    <td class="table-b8380c11-022e-424e-acc3-69900c40b013-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                    <button
-                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#e7ecf3] text-[#0e131b] text-sm font-medium leading-normal w-full priority-button"
-                        style="background-color: #e7ecf3 !important; color: #0e131b !important;"
-                    >
-                        <span class="truncate" style="color: #0e131b !important;">@Localizer["High"]</span>
-                    </button>
-                    </td>
-                </tr>
-                <tr class="border-t border-t-[#d0d9e7]">
-                    <td class="table-b8380c11-022e-424e-acc3-69900c40b013-column-120 h-[72px] px-4 py-2 w-[400px] text-[#0e131b] text-sm font-normal leading-normal">
-                    @Localizer["PreparePresentation"]
-                    </td>
-                    <td class="table-b8380c11-022e-424e-acc3-69900c40b013-column-240 h-[72px] px-4 py-2 w-[400px] text-[#4d6a99] text-sm font-normal leading-normal">
-                    2024-07-20
-                    </td>
-                    <td class="table-b8380c11-022e-424e-acc3-69900c40b013-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                    <button
-                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#e7ecf3] text-[#0e131b] text-sm font-medium leading-normal w-full priority-button"
-                        style="background-color: #e7ecf3 !important; color: #0e131b !important;"
-                    >
-                        <span class="truncate" style="color: #0e131b !important;">@Localizer["Medium"]</span>
-                    </button>
-                    </td>
-                </tr>
-                <tr class="border-t border-t-[#d0d9e7]">
-                    <td class="table-b8380c11-022e-424e-acc3-69900c40b013-column-120 h-[72px] px-4 py-2 w-[400px] text-[#0e131b] text-sm font-normal leading-normal">
-                    @Localizer["ReviewCampaign"]
-                    </td>
-                    <td class="table-b8380c11-022e-424e-acc3-69900c40b013-column-240 h-[72px] px-4 py-2 w-[400px] text-[#4d6a99] text-sm font-normal leading-normal">
-                    2024-07-25
-                    </td>
-                    <td class="table-b8380c11-022e-424e-acc3-69900c40b013-column-360 h-[72px] px-4 py-2 w-60 text-sm font-normal leading-normal">
-                    <button
-                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#e7ecf3] text-[#0e131b] text-sm font-medium leading-normal w-full priority-button"
-                        style="background-color: #e7ecf3 !important; color: #0e131b !important;"
-                    >
-                        <span class="truncate" style="color: #0e131b !important;">@Localizer["Low"]</span>
-                    </button>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            </div>
-        </div>
-        <h2 class="text-[#0e131b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5" id="recent-activity">@Localizer["RecentActivity"]</h2>
-        <div class="grid grid-cols-[40px_1fr] gap-x-2 px-4">
-            <div class="flex flex-col items-center gap-1 pt-3">
-            <div class="text-[#0e131b]" data-icon="UserPlus" data-size="24px" data-weight="regular">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                    d="M256,136a8,8,0,0,1-8,8H232v16a8,8,0,0,1-16,0V144H200a8,8,0,0,1,0-16h16V112a8,8,0,0,1,16,0v16h16A8,8,0,0,1,256,136Zm-57.87,58.85a8,8,0,0,1-12.26,10.3C165.75,181.19,138.09,168,108,168s-57.75,13.19-77.87,37.15a8,8,0,0,1-12.25-10.3c14.94-17.78,33.52-30.41,54.17-37.17a68,68,0,1,1,71.9,0C164.6,164.44,183.18,177.07,198.13,194.85ZM108,152a52,52,0,1,0-52-52A52.06,52.06,0,0,0,108,152Z"
-                ></path>
-                </svg>
-            </div>
-            <div class="w-[1.5px] bg-[#d0d9e7] h-2 grow"></div>
-            </div>
-            <div class="flex flex-1 flex-col py-3">
-            <p class="text-[#0e131b] text-base font-medium leading-normal">@Localizer["NewLead"]</p>
-            <p class="text-[#4d6a99] text-base font-normal leading-normal">2024-07-10</p>
-            </div>
-            <div class="flex flex-col items-center gap-1">
-            <div class="w-[1.5px] bg-[#d0d9e7] h-2"></div>
-            <div class="text-[#0e131b]" data-icon="Phone" data-size="24px" data-weight="regular">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                    d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"
-                ></path>
-                </svg>
-            </div>
-            <div class="w-[1.5px] bg-[#d0d9e7] h-2 grow"></div>
-            </div>
-            <div class="flex flex-1 flex-col py-3">
-            <p class="text-[#0e131b] text-base font-medium leading-normal">@Localizer["SalesCall"]</p>
-            <p class="text-[#4d6a99] text-base font-normal leading-normal">2024-07-12</p>
-            </div>
-            <div class="flex flex-col items-center gap-1 pb-3">
-            <div class="w-[1.5px] bg-[#d0d9e7] h-2"></div>
-            <div class="text-[#0e131b]" data-icon="CheckCircle" data-size="24px" data-weight="regular">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                    d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
-                ></path>
-                </svg>
-            </div>
-            </div>
-            <div class="flex flex-1 flex-col py-3">
-            <p class="text-[#0e131b] text-base font-medium leading-normal">@Localizer["ClosedDeal"]</p>
-            <p class="text-[#4d6a99] text-base font-normal leading-normal">2024-07-14</p>
-            </div>
-        </div>
-        <h2 class="text-[#0e131b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">@Localizer["LeadSourceAnalytics"]</h2>
-        <div class="flex flex-wrap gap-4 px-4 py-6">
-            <div class="flex min-w-72 flex-1 flex-col gap-2 rounded-lg border border-[#d0d9e7] p-6">
-            <p class="text-[#0e131b] text-base font-medium leading-normal">@Localizer["LeadsBySource"]</p>
-            <div class="grid min-h-[180px] gap-x-4 gap-y-6 grid-cols-[auto_1fr] items-center py-3">
-                <p class="text-[#4d6a99] text-[13px] font-bold leading-normal tracking-[0.015em]">@Localizer["Website"]</p>
-                <div class="h-full flex-1"><div class="border-[#4d6a99] bg-[#e7ecf3] border-r-2 h-full" style="width: 100%;"></div></div>
-                <p class="text-[#4d6a99] text-[13px] font-bold leading-normal tracking-[0.015em]">@Localizer["Referral"]</p>
-                <div class="h-full flex-1"><div class="border-[#4d6a99] bg-[#e7ecf3] border-r-2 h-full" style="width: 60%;"></div></div>
-                <p class="text-[#4d6a99] text-[13px] font-bold leading-normal tracking-[0.015em]">@Localizer["SocialMedia"]</p>
-                <div class="h-full flex-1"><div class="border-[#4d6a99] bg-[#e7ecf3] border-r-2 h-full" style="width: 30%;"></div></div>
-                <p class="text-[#4d6a99] text-[13px] font-bold leading-normal tracking-[0.015em]">@Localizer["EmailCampaign"]</p>
-                <div class="h-full flex-1"><div class="border-[#4d6a99] bg-[#e7ecf3] border-r-2 h-full" style="width: 60%;"></div></div>
-            </div>
-            </div>
-        </div>
         </div>
     </div>
     </div>
