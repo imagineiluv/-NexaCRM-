@@ -1,11 +1,18 @@
 window.deviceInfo = {
     isMobile: function () {
-        if (window.matchMedia) {
-            if (window.matchMedia('(max-width: 767px)').matches) {
-                return true;
-            }
-        }
         const ua = navigator.userAgent || navigator.vendor || window.opera;
-        return /android|iPad|iPhone|iPod/i.test(ua);
+        let isMobileResult;
+
+        if (window.matchMedia && window.matchMedia('(max-width: 767px)').matches) {
+            isMobileResult = true;
+        } else {
+            isMobileResult = /android|iPad|iPhone|iPod/i.test(ua);
+        }
+
+        const deviceType = isMobileResult ? 'Mobile' : 'Desktop';
+        console.log(`[DeviceInfo] User Agent: ${ua}`);
+        console.log(`[DeviceInfo] Detected Device Type: ${deviceType}`);
+
+        return isMobileResult;
     }
 };
